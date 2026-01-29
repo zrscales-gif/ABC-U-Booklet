@@ -89,7 +89,12 @@ p{color:#2B2623}
   color: #C8372D;
   transform: translateX(2px);
 }
-
+/* Mobile spacing fix for long pages (Kings & Queens) */
+@media (max-width: 600px) {
+  .page.long-content .card {
+    padding-top: 48px;   /* pushes content down */
+  }
+}
 </style>
 </head>
 <body>
@@ -283,7 +288,7 @@ p{color:#2B2623}
   </div>
 </div>
 
-<div class="page" id="p11">
+<div class="page long-content" id="p11">
   <div class="card">
     <button class="toc-btn" onclick="go('toc')">Back to Contents</button>
     <h2>K — King</h2>
@@ -385,7 +390,7 @@ p{color:#2B2623}
   </div>
 </div>
 
-<div class="page" id="p17">
+<div class="page long-content" id="p17">
   <div class="card">
     <button class="toc-btn" onclick="go('toc')">Back to Contents</button>
     <h2>Q — Queen</h2>
