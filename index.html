@@ -50,6 +50,18 @@ body{
   .card {
   margin: 0 auto;
 }
+/* Desktop card sizing */
+@media (min-width: 768px) {
+  .card {
+    max-width: 620px;     /* smaller than 760 */
+    padding: 40px 48px;   /* breathing room without height bloat */
+  }
+}
+@media (min-width: 768px) {
+  .card {
+    max-height: 80vh;
+  }
+}
 .image-wrap{
   width:320px;height:320px;margin:24px auto;
   display:flex;align-items:center;justify-content:center;
