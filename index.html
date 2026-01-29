@@ -62,6 +62,19 @@ body{
     max-height: 80vh;
   }
 }
+@media (min-width: 768px) {
+  .card {
+    max-width: 620px;
+    padding: 40px 48px;
+  }
+
+  .cover-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 .image-wrap{
   width:320px;height:320px;margin:24px auto;
   display:flex;align-items:center;justify-content:center;
@@ -142,13 +155,14 @@ p{color:#2B2623}
 <body>
 
 <div class="page active" id="cover">
-  <div class="card">
+  <div class="card cover-card">
     <h1>ABC University™</h1>
     <p><strong>A–Z Booklet Guide</strong></p>
     <p>A culturally rooted early-learning booklet designed to spark conversation, confidence, and curiosity.</p>
     <div class="nav"><button onclick="go('toc')">Begin</button></div>
   </div>
 </div>
+
 
 <div class="page" id="toc">
   <div class="card">
