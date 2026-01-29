@@ -23,8 +23,17 @@ body{
   perspective:1200px;
 }
 .page.active{display:flex}
+/* DESKTOP CENTERING FIX */
+@media (min-width: 768px) {
+  .page {
+    align-items: center;
+  }
 
-/* CARD */
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}/* CARD */
 .card{
   background:#F9C22B;
   max-width:620px;
@@ -64,9 +73,13 @@ p{color:#2B2623; line-height:1.45}
   text-align:left;
 }
 .toc-grid button{
-  background:none;border:none;
-  font-size:1.15rem;font-weight:800;
-  cursor:pointer;padding:6px 4px;
+  background:none;
+  border:none;
+  font-size:1.15rem;
+  font-weight:800;
+  cursor:pointer;
+  padding:6px 4px;
+  color:#2B2623; /* force black */
 }
 .toc-grid button:hover{
   background:rgba(200,55,45,.15);
