@@ -16,13 +16,11 @@ body{
   background-size:760px auto;
 }
 .page{
-  position:absolute;
-  inset:0;
-  display:none;
-  align-items:center;
+  min-height: 100svh;           /* Safe viewport height (Safari fix) */
+  display:flex;
   justify-content:center;
-  perspective:1200px;
-}
+  padding: 
+
 .page.active{display:flex}
 .page.turn-in .card{
   animation:turnIn .85s ease forwards;
@@ -118,20 +116,6 @@ p{color:#2B2623}
     background: #F9C22B;
     padding-top: 8px;
     z-index: 5;
-  }
-}
-  /* 📱 Center ALL content inside the yellow card on mobile */
-@media (max-width: 600px) {
-  .card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;   /* horizontal centering */
-    text-align: center;    /* text centering */
-  }
-
-  /* Keep buttons and nav clean */
-  .nav {
-    justify-content: center;
   }
 }
 </style>
