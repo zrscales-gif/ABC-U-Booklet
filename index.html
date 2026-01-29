@@ -120,6 +120,20 @@ p{color:#2B2623}
     z-index: 5;
   }
 }
+  /* 📱 Center ALL content inside the yellow card on mobile */
+@media (max-width: 600px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* horizontal centering */
+    text-align: center;    /* text centering */
+  }
+
+  /* Keep buttons and nav clean */
+  .nav {
+    justify-content: center;
+  }
+}
 </style>
 </head>
 <body>
