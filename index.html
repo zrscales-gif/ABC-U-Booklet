@@ -16,11 +16,14 @@ body{
   background-size:760px auto;
 }
 .page {
-  display: none;
-  min-height: 100svh;        /* safe viewport for iOS */
-  padding: 24px 16px 48px;   /* space top + bottom */
-  box-sizing: border-box;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  perspective: 1200px;
+  padding: 40px 20px; /* allows card to breathe */
 }
+
 
 .page.active {
   display: block;
@@ -40,15 +43,19 @@ body{
   from{transform:rotateY(0);opacity:1}
   to{transform:rotateY(10deg) translateX(-40px);opacity:0}
 }
-.card{
-  background:#F9C22B;
-  padding:32px;
-  max-width:760px;
-  border-radius:26px;
-  text-align:center;
+.card {
+  background: #F9C22B;
+  padding: 32px 36px;
+  max-width: 720px;
+  width: 100%;
+  border-radius: 26px;
+  text-align: center;
+  height: auto;          /* 🔑 key fix */
 }
-  .card {
-  margin: 0 auto;
+
+  /* DESKTOP: long content pages expand naturally */
+.page.long-content {
+  align-items: flex-start;
 }
 /* Desktop card sizing */
 @media (min-width: 768px) {
