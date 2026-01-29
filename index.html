@@ -74,7 +74,26 @@ body{
     justify-content: center;
   }
 }
+/* Desktop: tighter cover card */
+@media (min-width: 768px) {
+  .cover-card {
+    max-width: 520px;          /* smaller box width */
+    padding: 28px 36px;        /* tighter padding */
+  }
 
+  .cover-card h1 {
+    margin-bottom: 10px;
+  }
+
+  .cover-card p {
+    margin-top: 6px;
+    margin-bottom: 10px;
+  }
+
+  .cover-card .nav {
+    margin-top: 14px;
+  }
+}
 .image-wrap{
   width:320px;height:320px;margin:24px auto;
   display:flex;align-items:center;justify-content:center;
