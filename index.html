@@ -15,15 +15,16 @@ body{
   background-attachment: fixed;
   background-size:760px auto;
 }
-.page{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  perspective:1200px;
+.page {
+  display: none;
+  min-height: 100svh;        /* safe viewport for iOS */
+  padding: 24px 16px 48px;   /* space top + bottom */
+  box-sizing: border-box;
 }
 
+.page.active {
+  display: block;
+}
 .page.active{display:flex}
 .page.turn-in .card{
   animation:turnIn .85s ease forwards;
@@ -45,6 +46,9 @@ body{
   max-width:760px;
   border-radius:26px;
   text-align:center;
+}
+  .card {
+  margin: 0 auto;
 }
 .image-wrap{
   width:320px;height:320px;margin:24px auto;
